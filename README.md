@@ -1,6 +1,8 @@
 # OpenPostalUY 📬🇺🇾
 
-**OpenPostalUY** es una API desarrollada con Spring Boot que permite acceder de forma sencilla y estructurada a la información de direcciones postales en Uruguay. El objetivo principal del proyecto es proporcionar una herramienta abierta para consultas de códigos postales, localidades y departamentos.
+**OpenPostalUY** es una API desarrollada con Spring Boot que permite acceder de forma sencilla y estructurada a la
+información de direcciones postales en Uruguay. El objetivo principal del proyecto es proporcionar una herramienta
+abierta para consultas de códigos postales, localidades y departamentos.
 
 ## 🚀 Características
 
