@@ -1,6 +1,9 @@
 package com.benjaminpoloni.openpostaluy.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -50,8 +53,10 @@ public class Ciudad {
 
     @ManyToOne
     @JoinColumn(name = "departamento_id")
+    @JsonBackReference
     private Departamento departamento;
 
     @OneToMany(mappedBy = "ciudad", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<CodigoPostal> codigosPostales;
 }
