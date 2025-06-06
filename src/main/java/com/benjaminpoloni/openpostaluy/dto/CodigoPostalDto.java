@@ -11,4 +11,5 @@ import lombok.NoArgsConstructor;
 public class CodigoPostalDto {
     private Long id;
     private String codigoPostal;
+    private String ciudad;
 }
