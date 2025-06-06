@@ -1,13 +1,14 @@
 package com.benjaminpoloni.openpostaluy.model;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
 
 @Entity
-@Table(name="departamneto")
+@Table(name="departamento")
 public class Departamento {
 
 
@@ -43,5 +44,6 @@ public class Departamento {
 
 
     @OneToMany(mappedBy = "departamento", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Ciudad> ciudades;
 }

@@ -4,11 +4,35 @@ import com.benjaminpoloni.openpostaluy.dto.DepartamentoDto;
 import com.benjaminpoloni.openpostaluy.model.Departamento;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
-public interface DepartamentoMapper {
 
-    Departamento toEntity(DepartamentoDto departamentoDto);
+public class DepartamentoMapper {
+
+    public static DepartamentoDto toDto(Departamento departamento) {
+        if (departamento == null) {
+            return null;
+        }
+
+        DepartamentoDto departamentoDto = new DepartamentoDto();
+        departamentoDto.setId(departamento.getId());
+        departamentoDto.setNombre(departamento.getNombre());
+
+        if (departamento.getCiudades() != null) {
+            departamentoDto.setCiuad(departamento.getCiudades());
+        }
+        return departamentoDto;
+    }
 
 
-    DepartamentoDto toDto(Departamento departamento);
+    public static Departamento toEntity(DepartamentoDto departamentoDto) {
+        if (departamentoDto == null) {
+            return null;
+        }
+
+        Departamento departamento = new Departamento();
+        departamento.setId(departamentoDto.getId());
+        departamento.setNombre(departamentoDto.getNombre());
+
+        return departamento;
+    }
+
 }
