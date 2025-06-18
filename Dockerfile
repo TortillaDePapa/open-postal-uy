@@ -1,4 +1,6 @@
-FROM ubuntu:latest
+FROM openjdk:17
 LABEL authors="benja"
 
-ENTRYPOINT ["top", "-b"]
+COPY target/*.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
