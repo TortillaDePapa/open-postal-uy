@@ -1,0 +1,22 @@
+services:
+  open-postal-uy:
+    build: ./open-postal-uy
+    ports:
+      - "8080:8081"
+    environment:
+      - SPRING_DATASOURCE_URL==jdbc:postgresql://postgres:5432/postgres-openpostaluy
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=123456
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  volumes:
+  pgdata:

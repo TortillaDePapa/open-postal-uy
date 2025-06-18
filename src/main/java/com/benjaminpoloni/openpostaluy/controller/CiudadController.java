@@ -4,18 +4,21 @@ package com.benjaminpoloni.openpostaluy.controller;
 import com.benjaminpoloni.openpostaluy.model.Ciudad;
 import com.benjaminpoloni.openpostaluy.service.CiudadService;
 import jakarta.persistence.EntityNotFoundException;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/api/codigos-postales")
 public class CiudadController {
+
+
 
     private final CiudadService ciudadService;
 

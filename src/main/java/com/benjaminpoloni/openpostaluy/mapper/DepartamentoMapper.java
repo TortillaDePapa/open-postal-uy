@@ -2,7 +2,6 @@ package com.benjaminpoloni.openpostaluy.mapper;
 
 import com.benjaminpoloni.openpostaluy.dto.DepartamentoDto;
 import com.benjaminpoloni.openpostaluy.model.Departamento;
-import org.mapstruct.Mapper;
 
 
 public class DepartamentoMapper {
